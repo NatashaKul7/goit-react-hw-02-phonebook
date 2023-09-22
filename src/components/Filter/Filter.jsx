@@ -1,4 +1,4 @@
-export const Filter = ({ name, handleFilterChange }) => {
+export const Filter = ({ name, onChange }) => {
   return (
     <div>
       <p>Find contact by name</p>
@@ -6,8 +6,7 @@ export const Filter = ({ name, handleFilterChange }) => {
         type="text"
         name="name"
         value={name}
-        onChange={handleFilterChange}
-        // onClick={() => filterContacts(name)}
+        onChange={onChange}
       />
     </div>
   );
