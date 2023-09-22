@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import { nanoid } from 'nanoid';
 import { FormBox } from './Form.styled';
 
 class Form extends Component {
@@ -7,8 +6,7 @@ class Form extends Component {
     name: '',
     number: '',
   };
-  nameInputId = nanoid();
-  numberInputId = nanoid()
+  
 
   handleSubmit = e => {
     e.preventDefault();
@@ -40,7 +38,7 @@ class Form extends Component {
     return (
       <FormBox onSubmit={this.handleSubmit}>
         <h1>Phonebook</h1>
-        <label htmlFor={this.nameInputId}></label>
+        <label htmlFor="nameId"></label>
         Name
         <input
           type="text"
@@ -51,9 +49,9 @@ class Form extends Component {
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
           onChange={this.handleChange}
-          id={this.nameInputId}
+          id="nameId"
         />
-        <label htmlFor={this.numberInputId}></label>
+        <label htmlFor='numberId'></label>
         Number
         <input
           type="tel"
@@ -64,7 +62,7 @@ class Form extends Component {
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
           onChange={this.handleChange}
-          id={this.numberInputId}
+          id="numberId"
         />
         <button type="submit">Add contact</button>
       </FormBox>

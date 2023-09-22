@@ -5,7 +5,7 @@ import { nanoid } from 'nanoid';
 import { Container } from './App.styled';
 import Form from 'components/Form/Form';
 import { Contacts } from 'components/Contacts/Contacts';
-import { Search } from 'components/Filter/Filter';
+import { Filter } from 'components/Filter/Filter';
 
 export class App extends Component {
   state = {
@@ -61,7 +61,7 @@ export class App extends Component {
           <h3>There are no any contacts here</h3>
         ) : (
           <>
-            <Search onChange={this.handleFilterChange} filter={filter} />
+            <Filter onChange={this.handleFilterChange} filter={filter} />
             <Contacts
               // id={this.id}
               contacts={filteredContacts()}
