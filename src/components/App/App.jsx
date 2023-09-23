@@ -53,6 +53,7 @@ export class App extends Component {
   render() {
     const filteredContacts = this.filterContacts;
     const { filter } = this.state;
+    
     return (
       <Container>
         <Form handleAddContact={this.handleAddContact} />
@@ -63,7 +64,6 @@ export class App extends Component {
           <>
             <Filter onChange={this.handleFilterChange} filter={filter} />
             <Contacts
-              // id={this.id}
               contacts={filteredContacts()}
               handleDelete={this.handleDelete}
             />
